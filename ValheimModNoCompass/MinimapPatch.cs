@@ -8,7 +8,7 @@ using static Minimap;
 
 namespace ValheimModNoCompass
 {
-    internal class MinimapPatch
+    public class MinimapPatch
     {
         [HarmonyPrefix]
         [HarmonyPatch(typeof(Minimap), "DiscoverLocation")]
@@ -25,13 +25,13 @@ namespace ValheimModNoCompass
             //ref Minimap __instance
             //var currentPins = __instance.m_playerPins; // Example property
         }
-        //[HarmonyAfter]
-        //[HarmonyPatch(typeof(Minimap), "SetMapMode")]
-        //public static bool SetMapModePrefix(ref Minimap __instance)
-        //{
-        //    __instance.m_smallRoot.SetActive(value: false);
-        //        ModNoCompass.StaticLogger.LogInfo("Set Map mode after run change mini map to 'none'");
-        //    return true;
-        //}
+        [HarmonyAfter]
+        [HarmonyPatch(typeof(Minimap), "SetMapMode")]
+        public static bool SetMapModePrefix(ref Minimap __instance)
+        {
+            __instance.m_smallRoot.SetActive(value: false);
+            ModNoCompass.StaticLogger.LogInfo("Set Map mode after run change mini map to 'none'");
+            return true;
+        }
     }
 }
