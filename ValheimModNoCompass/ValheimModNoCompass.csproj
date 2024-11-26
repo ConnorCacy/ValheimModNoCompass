@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChatPing.cs" />
     <Compile Include="MinimapUpdatePlayerMarkers.cs" />
     <Compile Include="MinimapCenterMap.cs" />
     <Compile Include="MinimapPatchAddPin.cs" />
