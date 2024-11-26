@@ -11,17 +11,11 @@ namespace ValheimModNoCompass
     public class ModNoCompass : BaseUnityPlugin
     {
         private Harmony _harmony; 
-        //= new Harmony("connorcacy.valheim.nocompass");
         public static ManualLogSource StaticLogger;
         public void Awake()
         {
-            Harmony.DEBUG = true;
             StaticLogger = Logger;
-            Logger.LogInfo("Awake method called in no compass mod. Initializing mod...");
             _harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), "connorcacy.valheim.nocompass");
-            //_harmony.PatchAll();
-        
-
         }
       
     }

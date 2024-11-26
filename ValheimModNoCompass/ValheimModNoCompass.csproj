@@ -59,11 +59,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MinimapCenterMapFix.cs" />
-    <Compile Include="MinimapHideSmallMap.cs" />
+    <Compile Include="MinimapUpdatePlayerMarkers.cs" />
+    <Compile Include="MinimapCenterMap.cs" />
     <Compile Include="MinimapPatchAddPin.cs" />
     <Compile Include="MinimapPatchDiscoverLocation.cs" />
-    <Compile Include="MinimapPatchSetMapMode.cs" />
+    <Compile Include="LargeMapSetActive.cs" />
     <Compile Include="MinimapPatchUpdateDynamicPins.cs" />
     <Compile Include="MinimapUpdateMap.cs" />
     <Compile Include="ModNoCompass.cs" />

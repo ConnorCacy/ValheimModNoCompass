@@ -9,12 +9,14 @@ using UnityEngine;
 namespace ValheimModNoCompass
 {
     [HarmonyPatch(typeof(Minimap), "UpdatePlayerMarker")]
-    internal class MinimapCentermapfix
+    internal class MinimapUpdatePlayerMarkers
     {
-        //public PinData AddPin(Vector3 pos, PinType type, string name, bool save, bool isChecked, long ownerID = 0L, string author = "")
+        public static Minimap mapInstance;
         [HarmonyPrefix]
         public static bool UpdatePlayerMarkerPrefix(ref Minimap __instance)
         {
+            mapInstance = __instance;
+            __instance.m_smallRoot.SetActive(value: false);
             __instance.m_largeMarker.gameObject.SetActive(value: false);
             __instance.m_smallMarker.gameObject.SetActive(value: false);
             __instance.m_smallShipMarker.gameObject.SetActive(value: false);

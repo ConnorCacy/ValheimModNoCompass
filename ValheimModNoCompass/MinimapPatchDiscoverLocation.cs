@@ -14,9 +14,6 @@ namespace ValheimModNoCompass
         [HarmonyPrefix]
         public static bool DiscoverLocationPrefix(ref Minimap __instance, ref UnityEngine.Vector3 pos, ref Minimap.PinType type, ref string name, ref bool showMap)
         {
-            ModNoCompass.StaticLogger.LogInfo("discover location skipped but setting direction");
-            __instance.m_smallRoot.SetActive(value: false);
-            //orient the player to the location
             if (type == Minimap.PinType.Boss)
             {
                 Player.m_localPlayer.SetLookDir(pos - Player.m_localPlayer.transform.position, 3.5f);

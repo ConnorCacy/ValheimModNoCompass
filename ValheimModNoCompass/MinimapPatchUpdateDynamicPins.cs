@@ -12,11 +12,9 @@ namespace ValheimModNoCompass
     [HarmonyPatch(typeof(Minimap), "UpdateDynamicPins")]
     internal class MinimapPatchUpdateDynamicPins
     {
-        //public PinData AddPin(Vector3 pos, PinType type, string name, bool save, bool isChecked, long ownerID = 0L, string author = "")
         [HarmonyPrefix]
         public static bool UpdateDynamicPins()
         {  
-            
             return false;
         }
     }
