@@ -54,10 +54,18 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>lib\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MinimapCenterMapFix.cs" />
+    <Compile Include="MinimapHideSmallMap.cs" />
+    <Compile Include="MinimapPatchAddPin.cs" />
     <Compile Include="MinimapPatchDiscoverLocation.cs" />
-    <Compile Include="MiniMapPatchSetMapMode.cs" />
+    <Compile Include="MinimapPatchSetMapMode.cs" />
+    <Compile Include="MinimapPatchUpdateDynamicPins.cs" />
+    <Compile Include="MinimapUpdateMap.cs" />
     <Compile Include="ModNoCompass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
