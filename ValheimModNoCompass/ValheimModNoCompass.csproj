@@ -56,7 +56,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MinimapPatch.cs" />
+    <Compile Include="MinimapPatchDiscoverLocation.cs" />
+    <Compile Include="MiniMapPatchSetMapMode.cs" />
     <Compile Include="ModNoCompass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
